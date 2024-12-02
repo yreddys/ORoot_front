@@ -1,0 +1,67 @@
+/* /src/components/admin/AddProductForm.css */
+
+.add-product-form {
+  width: 30%;                /* Further reduced the width */
+  margin: 0 auto;
+  padding: 1rem;             /* Reduced padding to 1rem */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-product-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;       /* Reduced margin */
+}
+
+.add-product-form .form-group {
+  margin-bottom: 8px;        /* Reduced margin */
+}
+
+.add-product-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;        /* Reduced margin */
+}
+
+.add-product-form input,
+.add-product-form select,
+.add-product-form button {
+  width: 100%;
+  padding: 6px;              /* Further reduced padding */
+  margin: 4px 0;             /* Reduced margin */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;         /* Slightly smaller font size */
+}
+
+.add-product-form input[type="file"] {
+  padding: 4px;              /* Further reduced padding for file input */
+}
+
+.add-product-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;           /* Slightly smaller font size */
+  transition: background-color 0.3s;
+  padding: 8px;              /* Reduced padding */
+}
+
+.add-product-form button:hover {
+  background-color: #0056b3;
+}
+
+.add-product-form .error-message {
+  color: red;
+  text-align: center;
+  margin-top: 8px;           /* Reduced margin-top */
+}
+
+.add-product-form .success-message {
+  color: green;
+  text-align: center;
+  margin-top: 8px;           /* Reduced margin-top */
+}
