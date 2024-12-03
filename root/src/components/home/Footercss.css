@@ -1,15 +1,16 @@
 .footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    border-top: 1px solid #ddd;
-  }
-  
-  .footer p {
-    margin: 0;
-    font-size: 14px;
-  }
-  
+  background-color: #007bff; /* Enhanced background color */
+  text-align: center;
+  padding: 20px 10px; /* Add more padding for better spacing */
+  width: 100%;
+  border-top: 3px solid #0056b3; /* Thicker border for a distinct look */
+  color: white; /* Text color for better contrast */
+  font-size: 14px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elegance */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 16px; /* Slightly larger text */
+  font-weight: 500; /* Make the text semi-bold */
+}
