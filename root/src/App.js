@@ -1,32 +1,28 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import EditProducts from "./components/admin/EditProducts"; // Corrected path for AllProducts
-import AddProductForm from "./components/admin/AddProductForm"; // Corrected path for AddProductForm
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/home/Navbar";
+import HomePage from "./components/home/Home";
+import AdminHomeForm from "./components/admin/AdminHomeForm";
+import AddProductForm from "./components/admin/AddProductForm";
+import EditProducts from "./components/admin/EditProducts";
 
 const App = () => {
   return (
     <Router>
-      <div className="app-container">
-        <header>
-          <h1>ADMINS'S Management</h1>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/admin-add-product">Add Product</Link>
-              </li>
-              <li>
-                <Link to="/admin-edit-products">Edit Products</Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
+      <div>
+        {/* Navbar is included globally */}
+        <Navbar />
 
-        <main>
-          <Routes>
-            <Route path="/admin-add-product" element={<AddProductForm />} /> {/* Route to AddProductForm */}
-            <Route path="/admin-edit-products" element={<EditProducts />} /> {/* Route to AllProducts */}
-          </Routes>
-        </main>
+        {/* Define routes for your application */}
+        <Routes>
+          {/* Home page route */}
+          <Route path="/" element={<HomePage />} />
+
+          {/* Admin routes */}
+          <Route path="/admin" element={<AdminHomeForm />} />
+          <Route path="/admin-add-product" element={<AddProductForm />} />
+          <Route path="/admin-edit-products" element={<EditProducts />} />
+        </Routes>
       </div>
     </Router>
   );
