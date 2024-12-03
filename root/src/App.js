@@ -12,10 +12,10 @@ const App = () => {
           <nav>
             <ul>
               <li>
-                <Link to="/admin-addproduct">Add Product</Link>
+                <Link to="/admin-add-product">Add Product</Link>
               </li>
               <li>
-                <Link to="/admin-all-products">All Products</Link>
+                <Link to="/admin-edit-products">Edit Products</Link>
               </li>
             </ul>
           </nav>
@@ -23,8 +23,8 @@ const App = () => {
 
         <main>
           <Routes>
-            <Route path="/admin-addproduct" element={<AddProductForm />} /> {/* Route to AddProductForm */}
-            <Route path="/admin-all-products" element={<EditProducts />} /> {/* Route to AllProducts */}
+            <Route path="/admin-add-product" element={<AddProductForm />} /> {/* Route to AddProductForm */}
+            <Route path="/admin-edit-products" element={<EditProducts />} /> {/* Route to AllProducts */}
           </Routes>
         </main>
       </div>
