@@ -1,0 +1,27 @@
+.admin-home-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 10px 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    margin: 5px;
+  }
+  
+  nav a:hover {
+    background-color: #45a049;
+  }
+  
