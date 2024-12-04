@@ -1,18 +1,24 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ApiService from "../../service/ApiService";
 import "./HomePage.css";
+
+const resolvePhoto = (photo) => {
+  if (!photo) return "https://via.placeholder.com/150";
+  return photo.startsWith("data:image/") ? photo : `data:image/jpeg;base64,${photo}`;
+};
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
-  // Fetch products from API
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const data = await ApiService.getAllProducts();
-        console.log("Fetched products:", data); // Debug fetched data
+        console.log("Fetched products:", data);
         setProducts(data);
       } catch (err) {
         console.error("Error fetching products:", err);
@@ -41,18 +47,12 @@ const HomePage = () => {
       </header>
       <div className="product-grid">
         {products.map((product) => (
-          <div className="product-card" key={product.id}>
-            <img
-              src={
-                product.photo
-                  ? product.photo.startsWith("data:image/")
-                    ? product.photo
-                    : `data:image/jpeg;base64,${product.photo}`
-                  : "https://via.placeholder.com/150"
-              }
-              alt={product.name}
-              className="product-image"
-            />
+          <div
+            className="product-card"
+            key={product.id}
+            onClick={() => navigate(`/product-details/${product.id}`)}
+          >
+            <img src={resolvePhoto(product.photo)} alt={product.name} className="product-image" />
             <div className="product-details">
               <h2>{product.name}</h2>
               <p>Category: {product.category}</p>
