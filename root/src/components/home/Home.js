@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ApiService from "../../service/ApiService";
 import "./HomePage.css";
 
@@ -6,6 +7,7 @@ const HomePage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   // Fetch products from API
   useEffect(() => {
@@ -41,7 +43,11 @@ const HomePage = () => {
       </header>
       <div className="product-grid">
         {products.map((product) => (
-          <div className="product-card" key={product.id}>
+          <div
+            className="product-card"
+            key={product.id}
+            onClick={() => navigate(`/product-details/${product.id}`)} // Navigate to ProductDetailsPage
+          >
             <img
               src={
                 product.photo

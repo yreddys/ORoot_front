@@ -1,0 +1,48 @@
+.order-confirmation {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    max-width: 600px;
+  }
+  
+  .order-confirmation h3 {
+    color: #28a745;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .order-confirmation p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .order-confirmation h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .order-confirmation ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+  
+  .order-confirmation .home-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .order-confirmation .home-link:hover {
+    background-color: #0056b3;
+  }
+  

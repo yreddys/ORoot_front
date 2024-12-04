@@ -1,0 +1,54 @@
+.product-details {
+  max-width: 300px;
+  margin: 10px auto; /* Added top margin for better spacing */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff; /* Changed to pure white for better contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added a subtle shadow for a modern look */
+  text-align: center; /* Center align content for better appearance */
+}
+
+.product-details img {
+  width: 50%;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px; /* Added spacing below the image */
+  background-color: #f1f1f1; /* Add a light gray background for image placeholders */
+}
+
+.product-details h2 {
+  font-size: 26px; /* Slightly larger font size for better readability */
+  margin-top: 15px;
+  color: #333; /* Darker color for better contrast */
+  font-weight: bold; /* Make the title stand out */
+}
+
+.product-details p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #555; /* Softer color for descriptions */
+  line-height: 1.5; /* Improve readability with proper spacing */
+}
+
+.product-details button {
+  margin: 15px 10px 0 0; /* Adjusted spacing around buttons */
+  padding: 12px 25px; /* Slightly increased padding for better clickability */
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out; /* Smooth hover effects */
+}
+
+.product-details button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight zoom-in effect on hover */
+}
+
+.product-details button:active {
+  transform: scale(0.95); /* Button presses feel responsive */
+}
